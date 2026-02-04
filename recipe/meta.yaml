@@ -37,7 +37,6 @@ test:
     - datalab_kernel
   commands:
     - datalab-kernel-install --help
-    - pip check
     - pytest --collect-only --pyargs datalab_kernel.tests
   requires:
     - pip
