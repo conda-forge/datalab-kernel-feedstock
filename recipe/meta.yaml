@@ -13,7 +13,7 @@ build:
   entry_points:
     - datalab-kernel-install = datalab_kernel.install:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -37,8 +37,10 @@ test:
     - datalab_kernel
   commands:
     - datalab-kernel-install --help
+    - pytest --collect-only --pyargs datalab_kernel.tests
   requires:
     - pip
+    - pytest
     - python {{ python_min }}
 
 about:
