@@ -1,5 +1,5 @@
 {% set name = "datalab-kernel" %}
-{% set version = "0.2.10" %}
+{% set version = "0.2.11" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/datalab_kernel/datalab_kernel-{{ version }}.tar.gz
-  sha256: 9c8d4b4a87ddbb80c881c87cbf51bbb20faf51f4b66e5b6f4115609dfda980ac
+  sha256: 6049a36d4e06a25682f21216cc42d414397ca98f21270885b1f5a575cec960f9
 
 build:
   entry_points:
     - datalab-kernel-install = datalab_kernel.install:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
