@@ -1,5 +1,5 @@
 {% set name = "datalab-kernel" %}
-{% set version = "0.2.11" %}
+{% set version = "0.2.12" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/datalab_kernel/datalab_kernel-{{ version }}.tar.gz
-  sha256: 6049a36d4e06a25682f21216cc42d414397ca98f21270885b1f5a575cec960f9
+  sha256: dfcd61038d211bbef2094db16ec1a3bf060b4b2934b39b9c126b9c284b95cb6f
 
 build:
   entry_points:
@@ -30,7 +30,7 @@ requirements:
     - httpx >=0.25.0
     - h5py >=3.0
     - matplotlib-base >=3.5
-    - sigima >=1.0
+    - sigima >=1.4.0
 
 test:
   imports:
